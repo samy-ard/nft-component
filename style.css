@@ -1,0 +1,173 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--polo-blue: #8BACDA;
+	--cyan: #00FFF7;
+	--cyan2: #00FFF780;
+	--firefly: #0D192B;
+	--big-stone: #14253D;
+	--bluewood: #2F415B;
+	--white:	#FFFFFF;
+
+	#01909f
+}
+
+html, body {
+	font-family: 'Outfit', sans-serif;
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+	outline: none;
+	color: var(--cyan);
+}
+
+.text-cyan {
+	color: var(--cyan);
+}
+
+.text-polo-blue {
+	color: var(--polo-blue);
+}
+
+.text-white {
+	color: var(--white);
+}
+
+.font-weight-300 {
+	font-weight: 300;
+}
+
+.font-weight-400 {
+	font-weight: 400 
+}
+
+.font-weight-600 {
+	font-weight: 600;
+}
+
+.site-page {
+	color: var(--white);
+	padding: 23px;
+	background-color: var(--firefly);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	width: 100%;
+	max-width: 350px;
+	border-radius: 20px;
+	background-color: var(--big-stone);
+}
+
+.card-header {
+	padding: 23px 23px 0;
+}
+
+.card-header-link {
+	position: relative;
+	display: block;
+	z-index: 1;
+}
+
+.card-header-link::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	border-radius: 10px;
+	background-color: var(--cyan2);
+	transition: all 1s ease;
+	opacity: 0;
+}
+
+.card-header-link:hover::after {
+	opacity: 1;
+}
+
+.card-header-link-icon {
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	z-index: 3;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	transition: all 1s ease;
+}
+
+.card-header-link:hover .card-header-link-icon {
+	top: 50%;
+	opacity: 1;
+}
+
+.card-header-link-img {
+	display: block;
+	width: 100%;
+	border-radius: 10px;
+}
+
+.card-body {
+	padding: 28px 23px 15px;
+}
+
+.card-title {
+	font-size: 22px;
+	line-height: 1;
+	margin: 0;
+}
+
+.card-desc {
+	margin-top: 18px;
+	margin-bottom: 18px;
+	line-height: 1.4;
+}
+
+.card-details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card-details-col {
+	font-size: 16px;
+}
+
+.card-details-col img {
+	margin-right: 5px;
+}
+
+.col-item {
+	vertical-align: middle;
+}
+
+.card-footer {
+	font-size: 16px;
+	padding: 10px 23px 30px;
+}
+
+.card-author {
+	padding-top: 15px;
+	border-top: 1px solid var(--bluewood);
+}
+
+.card-author-img {
+	width: 30px;
+	border-radius: 100%;
+	margin-right: 10px;
+	border: 1px solid var(--white);
+}
